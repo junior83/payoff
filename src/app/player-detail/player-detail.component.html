@@ -2,12 +2,24 @@
 
 <!--  <h2>{{hero.name | uppercase}} </h2>-->
 <!--  <div><span>id: </span>{{hero.id}}</div>-->
-  <div>
-    {{hero.name | uppercase}} :
-    <label for="buyin">Wpisowe: </label>
-    <input id="buyin" [(ngModel)]="hero.buyin" placeholder="buyin">
-    <label for="chips">Chips: </label>
-    <input id="chips" [(ngModel)]="hero.chips" placeholder="chips">
+<!--  <div class="row">-->
+<!--    <div class="playerName,column">{{hero.name | uppercase}} :</div>-->
+<!--    <div class="column">-->
+<!--    <label for="buyin">Wpisowe: </label>-->
+<!--    <input id="buyin" [(ngModel)]="hero.buyin" placeholder="buyin">-->
+<!--    <label for="chips">Chips: </label>-->
+<!--    <input id="chips" [(ngModel)]="hero.chips" placeholder="chips">-->
+<!--    Wynik: {{hero.chips - hero.buyin}} {{hero.summary}}-->
+<!--    </div>-->
+<!--  </div>-->
+  <div class="row">
+    <div class="columnPlayerName">{{hero.name | uppercase}} :</div>
+    <div class="column">
+      <label for="buyin">Wpisowe: </label>
+      <input id="buyin" class="input" [(ngModel)]="hero.buyin" placeholder="buyin" type="number" min="100" step="100">
+      <label for="chips">Chips: </label>
+      <input id="chips" [(ngModel)]="hero.chips" placeholder="chips" type="number"  min="0">
+    </div>
     Wynik: {{hero.chips - hero.buyin}} {{hero.summary}}
   </div>
 </div>

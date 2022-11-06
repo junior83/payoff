@@ -9,3 +9,6 @@ export const PLAYERS: Player[] = [
   { id: 6, name: 'Zimny'   ,buyin : 100, chips : 100 , balance:0 , summary : "" },
 
 ];
+export const SUMMARY: Player =
+  { id: 1, name: 'Suma'     ,buyin : 120, chips : 100 , balance:0 , summary : "" }
+  ;

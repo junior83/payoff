@@ -21,15 +21,22 @@
 <!--    </button>-->
 <!--  </li>-->
 <!--</ul>-->
-<ul class="heroes">
-  <li *ngFor="let player of players">
-    <app-player-detail [hero]="player"></app-player-detail>
+<div *ngFor="let player of players">
+  <app-player-detail [hero]="player" ></app-player-detail>
+</div>
+<app-summary  [players]="players" ></app-summary>
+<!--<ul class="heroes">-->
+<!--  <li *ngFor="let player of players">-->
+<!--    <app-player-detail [hero]="player"></app-player-detail>-->
+<!--  </li>-->
+<!--  <li >-->
+<!--&lt;!&ndash;    <app-summary [hero]="player"></app-summary>&ndash;&gt;-->
+<!--    <app-summary></app-summary>-->
+<!--  </li>-->
+<!--</ul>-->
 
-  </li>
-</ul>
-<button type="button" (click)="settle()">Rozlicz</button>
 
-<div style="width: 500px;white-space: pre-line">{{summary}}</div>
+
 
   <!--      <span class="badge">{{hero.id}}</span>-->
   <!--      <span class="name">{{hero.name}}</span>-->
