@@ -1,0 +1,36 @@
+<!--<h2>{{player.name | uppercase}} Details</h2>-->
+<!--<div><span>id: </span>{{player.id}}</div>-->
+<!--<div><span>name: </span>{{player.name}}</div>-->
+<!--<div>-->
+<!--  <label for="name">Hero name: </label>-->
+<!--  <input id="name" [(ngModel)]="player.name" placeholder="name">-->
+<!--</div>-->
+<!--<h2>Players</h2>-->
+<!--<ul class="player">-->
+<!--  <li *ngFor="let player of players">-->
+<!--    <app-hero-detail [hero]="selectedHero"></app-hero-detail>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<h2>My Heroes</h2>-->
+
+<!--<ul class="heroes">-->
+<!--  <li *ngFor="let hero of heroes">-->
+<!--    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">-->
+<!--      <span class="badge">{{hero.id}}</span>-->
+<!--      <span class="name">{{hero.name}}</span>-->
+<!--    </button>-->
+<!--  </li>-->
+<!--</ul>-->
+<ul class="heroes">
+  <li *ngFor="let player of players">
+    <app-player-detail [hero]="player"></app-player-detail>
+
+  </li>
+</ul>
+<button type="button" (click)="settle()">Rozlicz</button>
+
+<div style="width: 500px;white-space: pre-line">{{summary}}</div>
+
+  <!--      <span class="badge">{{hero.id}}</span>-->
+  <!--      <span class="name">{{hero.name}}</span>-->
+  <!--    </button>-->

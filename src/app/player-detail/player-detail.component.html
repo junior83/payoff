@@ -1,0 +1,13 @@
+<div *ngIf="hero">
+
+<!--  <h2>{{hero.name | uppercase}} </h2>-->
+<!--  <div><span>id: </span>{{hero.id}}</div>-->
+  <div>
+    {{hero.name | uppercase}} :
+    <label for="buyin">Wpisowe: </label>
+    <input id="buyin" [(ngModel)]="hero.buyin" placeholder="buyin">
+    <label for="chips">Chips: </label>
+    <input id="chips" [(ngModel)]="hero.chips" placeholder="chips">
+    Wynik: {{hero.chips - hero.buyin}} {{hero.summary}}
+  </div>
+</div>
