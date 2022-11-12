@@ -57,7 +57,7 @@ export class SummaryComponent implements OnInit {
     }
 
     function chipsToMoney(chips: number) {
-      let m = chips /10
+      let m = chips /20
       return m.toFixed(2) + "zł";
     }
     for (let i = 0; i < this.players.length; i++) {
@@ -86,9 +86,9 @@ export class SummaryComponent implements OnInit {
       if (curPlayer != null && maxPlayer != null) {
         let number = Math.min(Math.abs(curPlayer.balance),Math.abs(maxPlayer.balance));
         curPlayer.balance +=number;
-        curPlayer.summary += " Płaci " + chipsToMoney(number) + " " + maxPlayer.name;
+        curPlayer.summary += " Płaci " + chipsToMoney(number) + " " + maxPlayer.name + " \n ";
         maxPlayer.balance -=number;
-        maxPlayer.summary += " Otrzymuje " + chipsToMoney(number) + " od " + curPlayer.name;
+        maxPlayer.summary += " Otrzymuje " + chipsToMoney(number) + " od " + curPlayer.name + " \n ";
         this.summary += " " +  curPlayer.name + " płaci " + chipsToMoney(number) + " " + maxPlayer.name +  " \n ";
       }
 

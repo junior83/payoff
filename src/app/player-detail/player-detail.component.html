@@ -16,12 +16,13 @@
     <div class="columnPlayerName">{{hero.name | uppercase}} :</div>
     <div class="column">
       <label for="buyin">Wpisowe: </label>
-      <input id="buyin" class="input" [(ngModel)]="hero.buyin" placeholder="buyin" type="number" min="100" step="100">
+      <input id="buyin" class="input" [(ngModel)]="hero.buyin" placeholder="buyin" type="number" min="100" step="200">
       <label for="chips">Chips: </label>
       <input id="chips" [(ngModel)]="hero.chips" placeholder="chips" type="number"  min="0">
     </div>
-    <div class="column">
-    Wynik: {{hero.chips - hero.buyin}} {{hero.summary}}
+    <div >
+      Wynik: {{hero.chips - hero.buyin}} {{hero.summary}}
     </div>
   </div>
+
 </div>
